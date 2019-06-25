@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Car Controller Arduino</string>
+    <string name="hello_wrold">Hello World</string>
+    <string name="action_settings">Settings</string>
+    <string name="send_raw_data">Send Raw Data</string>
+    <string name="begin">Begin</string>
+    <string name="send">Send</string>
+    <string name="stop">Stop</string>
+    <string name="clear">Clear</string>
+</resources>
+

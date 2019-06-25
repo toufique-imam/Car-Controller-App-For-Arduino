@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:autofillHints="Raw Data"
+        android:hint="@string/send_raw_data"
+        android:inputType="text"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickStart"
+        android:text="@string/begin" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonStart"
+        android:onClick="onClickSend"
+        android:text="@string/send" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonSend"
+        android:onClick="onClickStop"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonStop"
+        android:onClick="onClickClear"
+        android:text="@string/clear" />
+<!-- FORWARD -->
+    <Button
+        android:id="@+id/buttonForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonStart"
+        android:layout_toEndOf="@id/buttonLeft_forward"
+        android:onClick="ForwardCar"
+        android:text="Forward" />
+    <Button
+        android:id="@+id/buttonLeft_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSend"
+        android:layout_alignParentStart="true"
+        android:onClick="LeftCar_forward"
+        android:text="Left-Forward" />
+
+    <Button
+        android:id="@+id/buttonRight_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonStop"
+        android:layout_toEndOf="@+id/buttonForward"
+        android:onClick="RightCar_forward"
+        android:text="Right-Forward" />
+
+    <Button
+        android:id="@+id/buttonCarStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonForward"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="3dp"
+        android:onClick="StopCar"
+        android:text="Car Stop" />
+<!--backward-->
+    <Button
+        android:id="@+id/buttonBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCarStop"
+        android:layout_toEndOf="@+id/buttonLeft_backward"
+        android:onClick="BackCar"
+        android:text="Back" />
+
+
+    <Button
+        android:layout_alignParentStart="true"
+        android:id="@+id/buttonLeft_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCarStop"
+        android:onClick="LeftCar_backward"
+        android:text="Left-Backward" />
+
+    <Button
+        android:id="@+id/buttonRight_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCarStop"
+        android:layout_toEndOf="@+id/buttonBackward"
+        android:onClick="RightCar_backward"
+        android:text="Right-Backward" />
+
+    <EditText
+        android:id="@+id/EditTextSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonBackward"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="numberDecimal"
+        android:text="Car Speed" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditTextSpeed"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
